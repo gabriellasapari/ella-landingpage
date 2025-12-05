@@ -1,628 +1,340 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Ella – Singer, Dog Sitter & Digital Creator in Leoben</title>
+  <title>Ella – Links & Services</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Ella – Hundebetreuung in Leoben, Live-Gesang für Events und digitale Produkte." />
+  <meta name="description" content="Ella Sapari – Dog Sitting in Leoben, Live Singing & Digital Products." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<style>
-  :root {
-    --bg: #0f1115;          /* background utama: dark charcoal */
-    --bg-soft: #161922;
-    --card: #1e2230;        /* card */
-    --accent: #e4b15c;      /* gold lembut */
-    --accent-soft: #f0c977;
-    --text: #f7f4ef;        /* teks utama */
-    --muted: #a6aabb;       /* teks sekunder */
-    --border: #2c3140;
-    --radius: 18px;
-    --shadow: 0 18px 40px rgba(0,0,0,0.55);
-  }
-
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
-  body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    background: radial-gradient(circle at top left, #242735 0, #0f1115 45%, #0b0c10 100%);
-    color: var(--text);
-    line-height: 1.6;
-  }
-
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .page {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 1.5rem 1.25rem 3.2rem;
-  }
-
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    padding: 0.75rem 0 1.6rem;
-  }
-
-  .brand {
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-
-  .lang-pill {
-    font-size: 0.8rem;
-    padding: 0.25rem 0.75rem;
-    border-radius: 999px;
-    border: 1px solid var(--border);
-    color: var(--muted);
-    background: rgba(255,255,255,0.02);
-    backdrop-filter: blur(8px);
-  }
-
-  /* HERO */
-  .hero {
-    display: grid;
-    grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.7fr);
-    gap: 2.4rem;
-    padding: 1.7rem 1.4rem 2.6rem;
-    border-radius: 26px;
-    background: radial-gradient(circle at top left, #262b3b 0, #181b28 40%, #131621 100%);
-    box-shadow: var(--shadow);
-    border: 1px solid rgba(255,255,255,0.03);
-  }
-
-  .hero-main h1 {
-    font-size: clamp(1.9rem, 3vw, 2.5rem);
-    margin-bottom: 0.75rem;
-  }
-
-  .hero-main h1 span {
-    color: var(--accent);
-  }
-
-  .hero-main p {
-    max-width: 36rem;
-    margin-bottom: 1.4rem;
-    color: var(--muted);
-  }
-
-  .hero-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.45rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .tag {
-    font-size: 0.8rem;
-    padding: 0.28rem 0.75rem;
-    border-radius: 999px;
-    background: rgba(228,177,92,0.12);
-    border: 1px solid rgba(228,177,92,0.35);
-    color: var(--accent-soft);
-  }
-
-  .hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.8rem;
-    margin-bottom: 0.6rem;
-  }
-
-  .btn {
-    padding: 0.6rem 1.25rem;
-    border-radius: 999px;
-    border: 1px solid var(--accent);
-    font-size: 0.9rem;
-    cursor: pointer;
-    background: transparent;
-    color: var(--accent-soft);
-    transition: all 0.18s ease;
-  }
-
-  .btn.primary {
-    background: linear-gradient(135deg, var(--accent), #b98536);
-    color: #130f0a;
-    border-color: transparent;
-  }
-
-  .btn:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 10px 22px rgba(0,0,0,0.65);
-    background: linear-gradient(135deg, var(--accent-soft), var(--accent));
-    color: #120f0b;
-  }
-
-  .hero-note {
-    font-size: 0.8rem;
-    color: var(--muted);
-    margin-top: 0.85rem;
-  }
-
-  .hero-aside {
-    border-radius: 22px;
-    background: linear-gradient(145deg, #191d28, #151824);
-    padding: 1.3rem 1.3rem;
-    border: 1px solid var(--border);
-    box-shadow: 0 14px 30px rgba(0,0,0,0.5);
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-  }
-
-  .hero-aside h2 {
-    font-size: 1rem;
-    margin-bottom: 0.1rem;
-  }
-
-  .hero-aside p {
-    font-size: 0.86rem;
-    color: var(--muted);
-  }
-
-  .quote {
-    font-size: 0.8rem;
-    color: var(--muted);
-    border-left: 3px solid var(--accent);
-    padding-left: 0.8rem;
-    margin-top: 0.4rem;
-    font-style: italic;
-  }
-
-  /* SECTIONS */
-  section {
-    margin-top: 2.8rem;
-  }
-
-  section h2 {
-    font-size: 1.35rem;
-    margin-bottom: 0.7rem;
-  }
-
-  section p.lead {
-    font-size: 0.95rem;
-    color: var(--muted);
-    margin-bottom: 1.4rem;
-  }
-
-  /* CARDS GRID */
-  .grid-3 {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.2rem;
-  }
-
-  .card {
-    background: var(--card);
-    border-radius: var(--radius);
-    padding: 1.15rem 1.05rem 1.2rem;
-    border: 1px solid var(--border);
-    box-shadow: 0 16px 28px rgba(0,0,0,0.55);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 0.6rem;
-  }
-
-  .card small {
-    font-size: 0.78rem;
-    color: var(--muted);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-  }
-
-  .card h3 {
-    font-size: 1rem;
-    margin: 0.1rem 0 0.2rem;
-  }
-
-  .card p {
-    font-size: 0.9rem;
-    color: var(--muted);
-  }
-
-  .pill-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.3rem;
-    margin-top: 0.25rem;
-    font-size: 0.78rem;
-  }
-
-  .pill {
-    padding: 0.16rem 0.65rem;
-    border-radius: 999px;
-    background: #252a3a;
-    color: var(--muted);
-    border: 1px solid #343a4f;
-  }
-
-  .card .btn {
-    margin-top: 0.45rem;
-    align-self: flex-start;
-  }
-
-  /* DOG SITTING SECTION DETAIL */
-  .two-col {
-    display: grid;
-    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.2fr);
-    gap: 1.5rem;
-  }
-
-  .soft-box {
-    border-radius: var(--radius);
-    background: #181b26;
-    border: 1px solid var(--border);
-    padding: 1rem 1.1rem;
-    box-shadow: 0 16px 28px rgba(0,0,0,0.55);
-    font-size: 0.9rem;
-  }
-
-  .soft-box h3 {
-    font-size: 1rem;
-    margin-bottom: 0.45rem;
-  }
-
-  .soft-box ul,
-  .soft-box ol {
-    padding-left: 1.1rem;
-    margin: 0.3rem 0 0.4rem;
-  }
-
-  .soft-box li {
-    margin-bottom: 0.22rem;
-  }
-
-  .hint {
-    font-size: 0.8rem;
-    color: var(--muted);
-    margin-top: 0.35rem;
-  }
-
-  /* VIDEO GRID */
-  .video-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1rem;
-  }
-
-  .video-wrapper {
-    position: relative;
-    width: 100%;
-    padding-bottom: 177%;
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow: 0 18px 32px rgba(0,0,0,0.65);
-    background: #000;
-  }
-
-  .video-wrapper iframe {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-  }
-
-  /* CONTACT */
-  .contact-card {
-    background: #181b26;
-    border-radius: 22px;
-    border: 1px solid var(--border);
-    box-shadow: 0 18px 34px rgba(0,0,0,0.6);
-    padding: 1.3rem 1.3rem;
-    display: grid;
-    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
-    gap: 1.3rem;
-    font-size: 0.9rem;
-  }
-
-  .contact-list {
-    list-style: none;
-    margin-top: 0.5rem;
-  }
-
-  .contact-list li {
-    margin-bottom: 0.35rem;
-  }
-
-  .contact-list span {
-    font-weight: 600;
-    color: var(--muted);
-  }
-
-  footer {
-    margin-top: 3rem;
-    font-size: 0.75rem;
-    color: var(--muted);
-    text-align: center;
-  }
-
-  @media (max-width: 880px) {
-    .hero {
-      grid-template-columns: minmax(0, 1fr);
+  <style>
+    :root {
+      --bg: #fef4ee;          /* soft peach background */
+      --bg-grad-1: #ffe5d6;
+      --bg-grad-2: #fef4ee;
+      --card: #ffffff;
+      --accent: #e39c7b;      /* peachy nude */
+      --accent-soft: #f3b79a;
+      --text: #3b2b29;
+      --muted: #8c6d65;
+      --border: #f0d9cc;
+      --radius: 20px;
+      --shadow: 0 18px 40px rgba(179, 124, 101, 0.25);
     }
-    .two-col {
-      grid-template-columns: minmax(0, 1fr);
-    }
-    .grid-3 {
-      grid-template-columns: minmax(0, 1fr);
-    }
-    .video-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-    .contact-card {
-      grid-template-columns: minmax(0, 1fr);
-    }
-  }
 
-  @media (max-width: 600px) {
-    .video-grid {
-      grid-template-columns: minmax(0, 1fr);
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
-    .hero {
-      padding: 1.1rem 1rem 2.1rem;
+
+    body {
+      min-height: 100vh;
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, var(--bg-grad-1) 0, var(--bg-grad-2) 45%, #fbeee7 100%);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1.8rem 1.2rem;
     }
-  }
-</style>
+
+    .shell {
+      width: 100%;
+      max-width: 460px;
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: 32px;
+      box-shadow: var(--shadow);
+      padding: 1.8rem 1.4rem 1.9rem;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(16px);
+    }
+
+    .top-badge {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      text-align: center;
+      margin-bottom: 0.8rem;
+    }
+
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.7rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 20%, #ffe8dd, #f2b89a 60%, #e39c7b 100%);
+      border: 3px solid #fff7f3;
+      box-shadow: 0 10px 25px rgba(191, 120, 92, 0.55);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.3rem;
+    }
+
+    .avatar span {
+      filter: drop-shadow(0 3px 5px rgba(0,0,0,0.25));
+    }
+
+    .name {
+      font-weight: 600;
+      font-size: 1.3rem;
+    }
+
+    .handle {
+      font-size: 0.86rem;
+      color: var(--muted);
+    }
+
+    .bio {
+      font-size: 0.84rem;
+      color: var(--muted);
+      text-align: center;
+      max-width: 320px;
+    }
+
+    .tags {
+      margin-top: 0.8rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.35rem;
+    }
+
+    .tag {
+      font-size: 0.7rem;
+      padding: 0.18rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid #f0d7cb;
+      background: #fff7f3;
+      color: var(--muted);
+    }
+
+    .links {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .link-btn {
+      width: 100%;
+      border-radius: 999px;
+      border: 1px solid #f2d5c7;
+      background: #fff7f3;
+      padding: 0.75rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.7rem;
+      font-size: 0.9rem;
+      color: var(--text);
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 8px 18px rgba(215, 155, 126, 0.25);
+      transition: transform 0.14s ease, box-shadow 0.14s ease, background 0.14s ease;
+    }
+
+    .link-btn-main {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+    }
+
+    .link-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      background: #ffe6da;
+    }
+
+    .link-text-line1 {
+      font-weight: 500;
+    }
+
+    .link-text-line2 {
+      font-size: 0.74rem;
+      color: var(--muted);
+    }
+
+    .link-arrow {
+      font-size: 1rem;
+      color: var(--muted);
+    }
+
+    .link-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 26px rgba(191, 120, 92, 0.35);
+      background: #ffece1;
+    }
+
+    .link-btn.highlight {
+      background: linear-gradient(135deg, #e9a98b, #f3bfa3);
+      border-color: transparent;
+      color: #3b2520;
+    }
+
+    .link-btn.highlight .link-icon {
+      background: rgba(255, 245, 239, 0.85);
+    }
+
+    .link-btn.highlight .link-text-line2 {
+      color: #5a3730;
+    }
+
+    .link-btn.highlight:hover {
+      background: linear-gradient(135deg, #f3bfa3, #e39c7b);
+    }
+
+    .note {
+      margin-top: 1.4rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .note span {
+      font-weight: 500;
+      color: var(--accent);
+    }
+
+    .tiny {
+      margin-top: 0.4rem;
+      font-size: 0.7rem;
+      color: #b28a7b;
+      text-align: center;
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 1.2rem 0.9rem;
+      }
+      .shell {
+        padding: 1.5rem 1.2rem 1.7rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="page">
-    <header>
-      <div class="brand">Ella Sapari • Leoben</div>
-      <div class="lang-pill">DE • EN • ID</div>
-    </header>
+  <main class="shell">
+    <div class="top-badge">Ella Sapari • Leoben, Austria</div>
 
-    <!-- HERO -->
-    <section class="hero" id="top">
-      <div class="hero-main">
-        <h1>Ella – <span>Sängerin</span>, Dog Sitter &amp; Digital Creator in Leoben 🇦🇹</h1>
-        <p>
-          Ich lebe in Leoben (Steiermark) und biete liebevolle Hundebetreuung, Live-Gesang für besondere Momente
-          und digitale Produkte an. Alles, was ich tue, möchte ich mit Exzellenz, Herz und im Vertrauen auf Jesus machen.
-        </p>
-
-        <div class="hero-tags">
-          <span class="tag">Hundebetreuung in Leoben 🐾</span>
-          <span class="tag">Live-Gesang &amp; Worship 🎤</span>
-          <span class="tag">Digitale Produkte &amp; Pläne 📚</span>
-        </div>
-
-        <div class="hero-actions">
-          <a href="#digital" class="btn primary">Digital Products</a>
-          <a href="#dogsitting" class="btn">Dog Sitting Leoben</a>
-          <a href="#singing" class="btn">Live Singing</a>
-          <a href="#contact" class="btn">Kontakt</a>
-        </div>
-
-        <p class="hero-note">
-          Based in Leoben / Styria, Austria • Local services (dog sitting &amp; live singing) are regional only.
-        </p>
+    <section class="profile">
+      <div class="avatar">
+        <!-- nanti bisa diganti <img src="..." /> -->
+        <span>✨</span>
       </div>
-
-      <aside class="hero-aside">
-        <h2>Ein bisschen über mich 🤍</h2>
-        <p>
-          Ich komme aus Westpapua, Indonesien – wir haben zu Hause etwa 9 Hunde, und Hunde waren immer ein Teil meiner Familie.
-          Jetzt studiere ich in Leoben und biete hier Hundebetreuung, Gesang und digitale Inhalte an.
-        </p>
-        <p>
-          Über Jesus zu reden? Sehr gerne. Ich bin nicht perfekt und keine Pastorin oder Theologin –
-          nur eine Freundin, die Seine Liebe weitergeben möchte.
-        </p>
-        <p class="quote">
-          „Die Abwesenheit eines Menschen kann Gott füllen. Aber die Abwesenheit Gottes kann niemand füllen.“ – Unbekannt
-        </p>
-      </aside>
+      <div class="name">@gabriellasapari</div>
+      <div class="handle">Servus! Melanesian in Austria ♡</div>
+      <p class="bio">
+        Speaks German, English &amp; Indonesian (native).  
+        Dog lover, singer &amp; digital creator – living in Leoben (Styria).
+      </p>
+      <div class="tags">
+        <span class="tag">Dog Sitting • Leoben</span>
+        <span class="tag">Live Singing • Steiermark</span>
+        <span class="tag">Digital Products</span>
+      </div>
     </section>
 
-    <!-- SERVICES OVERVIEW -->
-    <section id="services">
-      <h2>Was ich anbiete</h2>
-      <p class="lead">
-        Hier findest du einen Überblick über meine Angebote – von Hundebetreuung in Leoben bis zu Live-Gesang und digitalen Produkten.
-      </p>
+    <!-- LINK BUTTONS -->
+    <section class="links">
 
-      <div class="grid-3">
-        <!-- Digital Products -->
-        <article class="card" id="digital">
+      <!-- Contact / Main -->
+      <a href="#contact" class="link-btn highlight">
+        <div class="link-btn-main">
+          <div class="link-icon">💌</div>
           <div>
-            <small>Digital Products</small>
-            <h3>Digitale Produkte &amp; Bibelpläne 📚</h3>
-            <p>
-              Aesthetic Bibellesepläne, Journals, Vorlagen und andere digitale Produkte – ideal für dein geistliches Wachstum
-              und deine Alltagsorganisation.
-            </p>
-            <div class="pill-row">
-              <span class="pill">Bibel Leseplan</span>
-              <span class="pill">Journal PDF</span>
-              <span class="pill">Templates</span>
-            </div>
+            <div class="link-text-line1">Get in Touch with Ella</div>
+            <div class="link-text-line2">For questions, bookings or a friendly hello.</div>
           </div>
-          <!-- Ganti # mit Link ke Shop (Gumroad / Payhip / Linktree) -->
-          <a href="#" class="btn primary">Zum Shop (bald verfügbar)</a>
-        </article>
+        </div>
+        <div class="link-arrow">↗</div>
+      </a>
 
-        <!-- Dog Sitting -->
-        <article class="card">
+      <!-- Dog Sitting -->
+      <a href="https://gabriellasapari.github.io/dogsitting-leoben/" class="link-btn">
+        <div class="link-btn-main">
+          <div class="link-icon">🐾</div>
           <div>
-            <small>Dog Sitting</small>
-            <h3>Hundebetreuung in Leoben 🐾</h3>
-            <p>
-              Persönliche 1-zu-1 Betreuung für deinen Hund in Leoben – mit viel Geduld, Liebe und Erfahrung aus Westpapua
-              (9 Hunde zu Hause).
-            </p>
-            <div class="pill-row">
-              <span class="pill">Leoben only</span>
-              <span class="pill">Spaziergänge</span>
-              <span class="pill">Tagesbetreuung</span>
-            </div>
+            <div class="link-text-line1">Dog Sitting in Leoben</div>
+            <div class="link-text-line2">Liebevolle 1:1 Hundebetreuung – nur Leoben.</div>
           </div>
-          <a href="#dogsitting" class="btn">Mehr erfahren 🤍</a>
-        </article>
+        </div>
+        <div class="link-arrow">➜</div>
+      </a>
 
-        <!-- Singing -->
-        <article class="card" id="singing">
+      <!-- Singing -->
+      <a href="#singing" class="link-btn">
+        <div class="link-btn-main">
+          <div class="link-icon">🎤</div>
           <div>
-            <small>Live Singing</small>
-            <h3>Live-Gesang &amp; Worship 🎤</h3>
-            <p>
-              Live-Gesang für Hochzeiten, Gottesdienste, kleine Events oder Worship-Abende – im Raum Leoben und Umgebung Steiermark.
-            </p>
-            <div class="pill-row">
-              <span class="pill">Hochzeiten</span>
-              <span class="pill">Events</span>
-              <span class="pill">Gemeinde</span>
-            </div>
+            <div class="link-text-line1">Listen to my Singing</div>
+            <div class="link-text-line2">Covers, Worship &amp; Live Music from YouTube.</div>
           </div>
-          <a href="#contact" class="btn">Booking anfragen</a>
-        </article>
-      </div>
+        </div>
+        <div class="link-arrow">▶</div>
+      </a>
+
+      <!-- Digital products (shop) -->
+      <a href="#" class="link-btn">
+        <div class="link-btn-main">
+          <div class="link-icon">📚</div>
+          <div>
+            <div class="link-text-line1">Digital Products (soon)</div>
+            <div class="link-text-line2">Bible reading plans, journals &amp; templates.</div>
+          </div>
+        </div>
+        <div class="link-arrow">⋯</div>
+      </a>
+
+      <!-- YouTube -->
+      <a href="https://www.youtube.com/@USERNAME" target="_blank" class="link-btn">
+        <div class="link-btn-main">
+          <div class="link-icon">🎥</div>
+          <div>
+            <div class="link-text-line1">YouTube Channel</div>
+            <div class="link-text-line2">Shorts, daily life in Leoben &amp; faith journey.</div>
+          </div>
+        </div>
+        <div class="link-arrow">↗</div>
+      </a>
+
+      <!-- Optional: Bible / Faith -->
+      <a href="#faith" class="link-btn">
+        <div class="link-btn-main">
+          <div class="link-icon">✝️</div>
+          <div>
+            <div class="link-text-line1">Faith &amp; Testimony</div>
+            <div class="link-text-line2">If you want to talk about Jesus – very welcome.</div>
+          </div>
+        </div>
+        <div class="link-arrow">♡</div>
+      </a>
     </section>
 
-    <!-- DOG SITTING DETAIL -->
-    <section id="dogsitting">
-      <h2>Hundebetreuung in Leoben 🐶</h2>
-      <p class="lead">
-        Für deinen Fellfreund biete ich liebevolle und zuverlässige Betreuung in Leoben an. Nur hundefreundliche Hunde – dafür mit ganz viel Herz.
-      </p>
-
-      <div class="two-col">
-        <!-- Left: Price & Rules -->
-        <div class="soft-box">
-          <h3>Preise (pro Hund)</h3>
-          <ul>
-            <li><strong>€12 / Stunde</strong> – Spaziergang oder kurze Betreuung</li>
-            <li><strong>€25 / Tag</strong> – Tagesbetreuung (Besuch, Füttern, Spazierengehen)</li>
-            <li><strong>€35 / Nacht</strong> – Übernacht-Betreuung (nur nach Absprache)</li>
-          </ul>
-          <p class="hint">
-            Zuschlag für große oder sehr aktive Hunde: ca. +€3–5 je nach Aufwand.
-          </p>
-
-          <h3 style="margin-top:1rem;">Regeln &amp; Bedingungen</h3>
-          <ol>
-            <li>Hundebetreuung ist <strong>nur in Leoben</strong> möglich.</li>
-            <li>Nur <strong>hundefreundliche Hunde</strong>, keine aggressiven Hunde.</li>
-            <li>Hund soll geimpft, entwurmt und möglichst haftpflichtversichert sein.</li>
-            <li>Futter, Leine, Geschirr und Infos (Allergien/Medikamente) kommen vom Besitzer.</li>
-            <li>Schäden, die der Hund verursacht, trägt der Besitzer.</li>
-            <li>Zahlung vor oder direkt nach der Betreuung.</li>
-          </ol>
-          <p class="hint">
-            This service is local only – dog sitting is available exclusively in Leoben.
-          </p>
-        </div>
-
-        <!-- Right: Agreement & FAQ -->
-        <div class="soft-box">
-          <h3>Einfache Vereinbarung</h3>
-          <p style="font-size:0.9rem;">
-            Vor der ersten Betreuung können wir eine kurze schriftliche Vereinbarung ausfüllen
-            (Name, Hund, Kontaktdaten, Zeitraum, Preis).  
-            Das schützt dich und mich &ndash; und sorgt dafür, dass dein Hund alles bekommt, was er braucht.
-          </p>
-
-          <p style="font-size:0.9rem; margin-top:0.6rem;"><strong>FAQ – kurz erklärt</strong></p>
-          <ul>
-            <li><strong>Wo?</strong> Nur in Leoben (Stadt &amp; nähere Umgebung).</li>
-            <li><strong>Welche Hunde?</strong> Nur freundliche, sozial verträgliche Hunde.</li>
-            <li><strong>Bringst du Futter mit?</strong> Futter &amp; Leine kommen vom Besitzer.</li>
-            <li><strong>Übernacht?</strong> Ja, nach Absprache und je nach Hund.</li>
-          </ul>
-
-          <p class="hint">
-            Wenn du möchtest, kann ich dir ein PDF mit allen Infos &amp; Agreement schicken (DE &amp; EN).
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- YOUTUBE SECTION -->
-    <section id="video">
-      <h2>Ein Einblick in meine Welt 🎥</h2>
-      <p class="lead">
-        Hier sind ein paar YouTube-Shorts &amp; Videos – Hundebetreuung, Alltag und manchmal auch Gesang.
-      </p>
-
-      <div class="video-grid">
-        <!-- Ganti ID_VIDEO_x dengan YouTube Video ID kamu -->
-        <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/ID_VIDEO_1"
-                  title="YouTube video 1" allowfullscreen></iframe>
-        </div>
-        <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/ID_VIDEO_2"
-                  title="YouTube video 2" allowfullscreen></iframe>
-        </div>
-        <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/ID_VIDEO_3"
-                  title="YouTube video 3" allowfullscreen></iframe>
-        </div>
-      </div>
-
-      <p class="hint" style="margin-top:0.8rem;">
-        Du kannst die Video-IDs einfach austauschen (ID_VIDEO_1, ID_VIDEO_2, …) mit deinen eigenen YouTube-Shorts.
-      </p>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <h2>Kontakt &amp; Buchungen 💌</h2>
-      <p class="lead">
-        Für Hundebetreuung, Live-Gesang oder Fragen zu meinen digitalen Produkten kannst du mich hier erreichen:
-      </p>
-
-      <div class="contact-card">
-        <div>
-          <h3>Schreib mir gerne</h3>
-          <ul class="contact-list">
-            <li><span>E-Mail:</span> <a href="mailto:deine.email@beispiel.com">deine.email@beispiel.com</a></li>
-            <li><span>WhatsApp / Signal:</span> <em>Nummer hier einfügen</em></li>
-            <li><span>Instagram:</span> <a href="https://instagram.com/DEIN_INSTAGRAM" target="_blank">@DEIN_INSTAGRAM</a></li>
-          </ul>
-          <p class="hint">
-            You can write in German, English or Indonesian.  
-            Du kannst auf Deutsch, Englisch oder Indonesisch schreiben. 💛
-          </p>
-        </div>
-
-        <div>
-          <h3>Kurz zusammengefasst</h3>
-          <p>
-            • Gesang &amp; Collabs → Leoben + Steiermark<br />
-            • Hundebetreuung → nur in Leoben (nur hundefreundliche Hunde 🐾)<br />
-            • Digitale Produkte → weltweit als Download
-          </p>
-          <p style="margin-top:0.6rem;">
-            Wenn du über Jesus sprechen oder einfach dein Herz teilen möchtest:
-            du bist jederzeit herzlich willkommen. Ich bin nicht perfekt,
-            aber ich kenne Einen, dessen Liebe perfekt ist. 🤍
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      © <span id="year"></span> Ella Sapari – Leoben, Austria.  
-      Built with love, dogs &amp; faith.
-    </footer>
-  </div>
-
-  <script>
-    // Set current year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+    <p class="note">
+      Based in <span>Leoben, Styria</span>.  
+      Dog sitting is only local; live singing available in Leoben &amp; nearby Steiermark.
+    </p>
+    <p class="tiny">
+      Languages: Deutsch • English • Bahasa Indonesia (Muttersprache).
+    </p>
+  </main>
 </body>
 </html>
